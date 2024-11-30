@@ -1,10 +1,10 @@
-class ApiModal {
+class Modal {
   late int id;
   late dynamic price;
   late String title, category , image, description;
   late Rating rating;
 
-  ApiModal({
+  Modal({
     required this.id,
     required this.price,
     required this.title,
@@ -14,8 +14,8 @@ class ApiModal {
     required this.description,
   });
 
-  factory ApiModal.fromJson(Map m1) {
-    return ApiModal(
+  factory Modal.fromJson(Map m1) {
+    return Modal(
         id: m1['id'],
         price: m1['price'],
         title: m1['title'],

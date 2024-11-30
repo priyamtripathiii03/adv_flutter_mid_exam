@@ -9,12 +9,12 @@ class HomeProvider extends ChangeNotifier
   int selectIndex=0;
   List<String> addList=[];
   ApiHelper apiHelper=ApiHelper();
-  List<ApiModal>? modalListSave;
-  late List<ApiModal> apiModalList;
-  Future<List<ApiModal>> apiComes()
+  List<Modal>? modalListSave;
+  late List<Modal> apiModalList;
+  Future<List<Modal>> apiComes()
   async {
     List apiData= await apiHelper.apiCalling();
-    apiModalList = apiData.map((e) => ApiModal.fromJson(e),).toList();
+    apiModalList = apiData.map((e) => Modal.fromJson(e),).toList();
     return apiModalList;
   }
   HomeProvider()
@@ -62,7 +62,7 @@ class HomeProvider extends ChangeNotifier
     double adding=0;
     for(int i=0;i<addList.length;i++)
     {
-      adding=adding+ modalListSave![int.parse(addList[i].split(" ").sublist(0,1).join(" "))].price;
+      adding=adding+ modalListSave![int.parse(addList[i])].price;
     }
     total=adding;
     print(total);

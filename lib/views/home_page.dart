@@ -38,7 +38,7 @@ class HomePage extends StatelessWidget {
         future: Provider.of<HomeProvider>(context).apiComes(),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
-            List<ApiModal>? apiModal = snapshot.data;
+            List<Modal>? apiModal = snapshot.data;
             homeProviderTrue.modalListSave = snapshot.data;
             return GridView.builder(
               itemCount: apiModal!.length,
@@ -77,16 +77,14 @@ class HomePage extends StatelessWidget {
                           ),
                         ),
                         Container(
-                          width: 150,
+                          height: 200,
+                          width: 280,
                           color: Colors.blue.withOpacity(0),
                           child: Column(
                             children: [
                               Text(
                                 apiModal[index]
-                                    .title
-                                    .split(" ")
-                                    .sublist(0, 1)
-                                    .join(" "),
+                                    .title,
                                 style: const TextStyle(
                                     fontWeight: FontWeight.bold, fontSize: 15),
                               ),

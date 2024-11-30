@@ -1,28 +1,27 @@
-# E-commerce API App 🛒
-An E-commerce API enables an online store to manage product listings, user accounts, shopping carts, payments, and orders. The API integrates with the frontend of a mobile or web application, enabling smooth customer interactions. Below are the core components of the API.
+# E-Commerce API App 🛒📱
 
+## Key Features:
 
-1. Product Management API 🛍️
-Handles the product catalog: adding, listing, and viewing products.
+1. Product Management 🏷️🛍️
+Manage products (add, edit, delete) with complete details like name, price, description, images, and stock count.
 
-2. Shopping Cart API 🛒
-Manages the shopping cart where users can add or remove products.
+2. Product Categories & Search 🔍🗂️
+Organize products into categories and enable users to search by keywords or filters.
 
-3. Order Management API 📦
-Handles orders after users are ready to checkout, including order creation, tracking, and updating statuses.
+3. Order Processing 📦💳
+Track and manage customer orders, from adding products to cart to completing payments.
 
-4. DELETE /cart/remove/{id}
-Remove an item from the cart by product ID.
+4. Discounts and Coupons 🎟️💰
+Implement discount codes and special offers to boost sales and customer engagement.
 
 <p>
-  <img src="https://github.com/user-attachments/assets/109e3b88-a7cb-403e-9d9f-65fc03adb976"height="35%" width="22%">
-   <img src="https://github.com/user-attachments/assets/c482aa48-8890-4afa-b708-29925d319821"height="35%" width="22%">
-    <img src="https://github.com/user-attachments/assets/c59cacb8-fa32-4e58-aeac-3f776e3e7e38"height="35%" width="22%">
-    <img src="https://github.com/user-attachments/assets/eef21f40-694a-4fc5-9e07-411868c9f6c9"height="35%" width="22%">
-    <img src="https://github.com/user-attachments/assets/c23a3df4-1e07-4e6a-b253-600068aa0229"height="35%" width="22%">
+  <img src="https://github.com/user-attachments/assets/d1c83e2d-bbe5-420e-9d50-635d29eb4079"height="35%" width="22%">
+    <img src="https://github.com/user-attachments/assets/52e97dad-986a-4e2e-9e40-7b9d2ab79650"height="35%" width="22%">
+      <img src="https://github.com/user-attachments/assets/7a80ced1-6333-4584-90bb-3a58d20af344"height="35%" width="22%">
+        <img src="https://github.com/user-attachments/assets/651c586f-f416-4ced-882a-d9674382cf42"height="35%" width="22%">
+          <img src="![Screenshot_20241130_150243](https://github.com/user-attachments/assets/ab42a549-f828-48d3-aca6-140ac36f91b8"height="35%" width="22%">
+  
 </p>
 
-
-https://github.com/user-attachments/assets/f2277ea7-5f89-4679-a2dd-e085f4ea2d17
-
+https://github.com/user-attachments/assets/b7dfebb9-ab6f-41fd-9228-b8f336830e73
 
