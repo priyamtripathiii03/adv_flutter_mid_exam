@@ -11,14 +11,13 @@ class DetailPage extends StatelessWidget {
         Provider.of<HomeProvider>(context, listen: true);
     HomeProvider homeProviderFalse =
         Provider.of<HomeProvider>(context, listen: false);
-    double h = MediaQuery.of(context).size.height;
-    double w = MediaQuery.of(context).size.width;
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.amber,
         elevation: 10,
         shadowColor: Colors.black,
-        title: Text(
+        title: const Text(
           'Detail Page',
           style: TextStyle(
               color: Colors.white, fontWeight: FontWeight.bold, fontSize: 30),
@@ -33,7 +32,7 @@ class DetailPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Padding(
@@ -45,7 +44,7 @@ class DetailPage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                   image: DecorationImage(
                       image: NetworkImage(homeProviderTrue
-                          .apiModalListSave![homeProviderTrue.selectIndex]
+                          .modalListSave![homeProviderTrue.selectIndex]
                           .image),
                       fit: BoxFit.cover),
                 ),
@@ -55,20 +54,22 @@ class DetailPage extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Text(
                 homeProviderTrue
-                    .apiModalListSave![homeProviderTrue.selectIndex].title,
-                style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                    .modalListSave![homeProviderTrue.selectIndex].title,
+                style: const TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
               ),
             ),
             Row(
               children: [
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    "\$ ${homeProviderTrue.apiModalListSave![homeProviderTrue.selectIndex].price}",
-                    style: TextStyle(
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.grey.shade600),
+                  child: Center(
+                    child: Text(
+                      "\$ ${homeProviderTrue.modalListSave![homeProviderTrue.selectIndex].price}",
+                      style: TextStyle(
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.grey.shade600),
+                    ),
                   ),
                 ),
               ],
@@ -78,10 +79,10 @@ class DetailPage extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
-                      width: w / 1.1,
+                      width: 400,
                       child: Column(
                         children: [
-                          Row(
+                          const Row(
                             children: [
                               Text(
                                 "Description",
@@ -90,12 +91,12 @@ class DetailPage extends StatelessWidget {
                               ),
                             ],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
                           Text(
-                            "${homeProviderTrue.apiModalListSave![homeProviderTrue.selectIndex].description}",
-                            style: TextStyle(
+                            homeProviderTrue.modalListSave![homeProviderTrue.selectIndex].description,
+                            style: const TextStyle(
                               fontSize: 20,
                             ),
                           ),
@@ -108,7 +109,7 @@ class DetailPage extends StatelessWidget {
         ),
       ),
       floatingActionButton: Padding(
-        padding: const EdgeInsets.only(right: 130),
+        padding: const EdgeInsets.only(right: 150),
         child: ElevatedButton(
           style: ButtonStyle(
               backgroundColor: WidgetStateProperty.all(Colors.amber)),
@@ -116,18 +117,18 @@ class DetailPage extends StatelessWidget {
             if (!homeProviderFalse.checkList(
                     homeProviderTrue.selectIndex,
                     homeProviderTrue
-                        .apiModalListSave![homeProviderTrue.selectIndex]
+                        .modalListSave![homeProviderTrue.selectIndex]
                         .price) ||
                 homeProviderTrue.addList == []) {
               homeProviderFalse.addToCart(
                   homeProviderTrue.selectIndex,
                   homeProviderTrue
-                      .apiModalListSave![homeProviderTrue.selectIndex].price);
+                      .modalListSave![homeProviderTrue.selectIndex].price);
             }
             homeProviderFalse.totalCart();
             Navigator.of(context).pushNamed('/cart');
           },
-          child: Text(
+          child: const Text(
             "Add Cart",
             style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
           ),

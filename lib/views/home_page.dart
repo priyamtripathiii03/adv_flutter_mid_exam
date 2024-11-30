@@ -10,29 +10,26 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     HomeProvider homeProviderTrue =
         Provider.of<HomeProvider>(context, listen: true);
-    HomeProvider homeProviderFalse =
-        Provider.of<HomeProvider>(context, listen: false);
-    double h = MediaQuery.of(context).size.height;
-    double w = MediaQuery.of(context).size.width;
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.amber,
         elevation: 10,
         shadowColor: Colors.black,
-        title: Text(
+        title: const Text(
           "Home Page",
           style: TextStyle(
               color: Colors.white, fontWeight: FontWeight.bold, fontSize: 30),
         ),
         centerTitle: true,
-        leading: Icon(
+        leading: const Icon(
           Icons.menu,
           size: 30,
           color: Colors.white,
         ),
-        actions: [
+        actions: const [
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: EdgeInsets.all(8.0),
             child: Icon(Icons.save,color: Colors.white,size: 30,),
           )
         ],
@@ -42,7 +39,7 @@ class HomePage extends StatelessWidget {
         builder: (context, snapshot) {
           if (snapshot.hasData) {
             List<ApiModal>? apiModal = snapshot.data;
-            homeProviderTrue.apiModalListSave = snapshot.data;
+            homeProviderTrue.modalListSave = snapshot.data;
             return GridView.builder(
               itemCount: apiModal!.length,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(

@@ -11,14 +11,13 @@ class CartPage extends StatelessWidget {
         Provider.of<HomeProvider>(context, listen: true);
     HomeProvider homeProviderFalse =
         Provider.of<HomeProvider>(context, listen: false);
-    double h = MediaQuery.of(context).size.height;
-    double w = MediaQuery.of(context).size.width;
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.amber,
         elevation: 10,
         shadowColor: Colors.black,
-        title: Text(
+        title: const Text(
           "Cart Page",
           style: TextStyle(
               fontSize: 30, color: Colors.white, fontWeight: FontWeight.bold),
@@ -39,20 +38,19 @@ class CartPage extends StatelessWidget {
         itemBuilder: (context, index) => Container(
           height: 150,
           child: Card(
-            color: Colors.blue.shade100,
             child: Column(
               children: [
                 Row(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.all(10),
                       child: Container(
                         height: 120,
                         width: 100,
                         decoration: BoxDecoration(
                           image: DecorationImage(
                               image: NetworkImage(homeProviderTrue
-                                  .apiModalListSave![int.parse(homeProviderTrue
+                                  .modalListSave![int.parse(homeProviderTrue
                                       .addList[index]
                                       .split(" ")
                                       .sublist(0, 1)
@@ -68,7 +66,7 @@ class CartPage extends StatelessWidget {
                       children: [
                         Text(
                           homeProviderTrue
-                              .apiModalListSave![int.parse(homeProviderTrue
+                              .modalListSave![int.parse(homeProviderTrue
                                   .addList[index]
                                   .split(" ")
                                   .sublist(0, 1)
@@ -81,13 +79,13 @@ class CartPage extends StatelessWidget {
                               fontSize: 20, fontWeight: FontWeight.bold),
                         ),
                         Text(
-                          "\$ ${homeProviderTrue.apiModalListSave![int.parse(homeProviderTrue.addList[index].split(" ").sublist(0, 1).join(" "))].price}",
+                          "\$ ${homeProviderTrue.modalListSave![int.parse(homeProviderTrue.addList[index].split(" ").sublist(0, 1).join(" "))].price}",
                           style: const TextStyle(
                               fontSize: 20, fontWeight: FontWeight.bold),
                         ),
                       ],
                     ),
-                    Spacer(),
+                    const Spacer(),
                     Row(
                       children: [
                         IconButton(

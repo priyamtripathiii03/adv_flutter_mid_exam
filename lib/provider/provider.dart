@@ -9,7 +9,7 @@ class HomeProvider extends ChangeNotifier
   int selectIndex=0;
   List<String> addList=[];
   ApiHelper apiHelper=ApiHelper();
-  List<ApiModal>? apiModalListSave;
+  List<ApiModal>? modalListSave;
   late List<ApiModal> apiModalList;
   Future<List<ApiModal>> apiComes()
   async {
@@ -53,7 +53,7 @@ class HomeProvider extends ChangeNotifier
   Future<void> getBookMark()
   async {
     SharedPreferences sharedPreferences= await SharedPreferences.getInstance();
-    addList=sharedPreferences.getStringList("book") ?? [];
+    addList=sharedPreferences.getStringList("collect") ?? [];
     // totalCart();
     notifyListeners();
   }
@@ -62,7 +62,7 @@ class HomeProvider extends ChangeNotifier
     double adding=0;
     for(int i=0;i<addList.length;i++)
     {
-      adding=adding+apiModalListSave![int.parse(addList[i].split(" ").sublist(0,1).join(" "))].price;
+      adding=adding+ modalListSave![int.parse(addList[i].split(" ").sublist(0,1).join(" "))].price;
     }
     total=adding;
     print(total);
