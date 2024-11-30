@@ -1,16 +1,15 @@
-# adv_flutter_mid_exam
+# E commerce Api App 
 
-A new Flutter project.
 
-## Getting Started
+<p>
+  <img src="https://github.com/user-attachments/assets/109e3b88-a7cb-403e-9d9f-65fc03adb976"height="35%" width="22%">
+   <img src="https://github.com/user-attachments/assets/c482aa48-8890-4afa-b708-29925d319821"height="35%" width="22%">
+    <img src="https://github.com/user-attachments/assets/c59cacb8-fa32-4e58-aeac-3f776e3e7e38"height="35%" width="22%">
+    <img src="https://github.com/user-attachments/assets/eef21f40-694a-4fc5-9e07-411868c9f6c9"height="35%" width="22%">
+    <img src="https://github.com/user-attachments/assets/c23a3df4-1e07-4e6a-b253-600068aa0229"height="35%" width="22%">
+</p>
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+https://github.com/user-attachments/assets/f2277ea7-5f89-4679-a2dd-e085f4ea2d17
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
